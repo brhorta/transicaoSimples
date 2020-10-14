@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="transicaoSimples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nome" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PA5-Fq-f8O">
+                                <rect key="frame" x="20" y="74" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Endereco" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1iq-Bn-BE9">
+                                <rect key="frame" x="20" y="798" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxV-0d-Vk6">
+                                <rect key="frame" x="156" y="425" width="102" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="cadastrarEndereco:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TIJ-FB-fs6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="1iq-Bn-BE9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bkc-QT-Ph3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1iq-Bn-BE9" secondAttribute="trailing" constant="20" id="Fmn-4U-own"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PA5-Fq-f8O" secondAttribute="trailing" constant="20" id="MEV-c8-LfR"/>
+                            <constraint firstItem="PA5-Fq-f8O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ahp-0f-MNt"/>
+                            <constraint firstItem="PA5-Fq-f8O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hd4-52-ykH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1iq-Bn-BE9" secondAttribute="bottom" constant="30" id="mBy-j4-nAG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enderecoTextField" destination="1iq-Bn-BE9" id="Wgr-nr-tnM"/>
+                        <outlet property="okButton" destination="xxV-0d-Vk6" id="IxY-rd-ELu"/>
+                        <outlet property="txtNome" destination="PA5-Fq-f8O" id="PlR-wZ-OWZ"/>
+                        <segue destination="3By-ua-Nt3" kind="presentation" identifier="segueEndereco" id="Cza-3c-xXh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="98.4375"/>
+        </scene>
+        <!--EnderecoVC-->
+        <scene sceneID="PXi-0E-rQZ">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="3By-ua-Nt3" customClass="EnderecoVC" customModule="transicaoSimples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zhz-Ok-PZu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hc-4d-Olz">
+                                <rect key="frame" x="172" y="485" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="N2s-hg-Ep1"/>
+                                </constraints>
+                                <state key="normal" title="Enviar"/>
+                                <connections>
+                                    <action selector="enviarEndereco:" destination="3By-ua-Nt3" eventType="touchUpInside" id="yYv-ht-2P1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiD-kd-Ldq">
+                                <rect key="frame" x="186.5" y="64" width="41" height="30"/>
+                                <state key="normal" title="Voltar"/>
+                                <connections>
+                                    <action selector="clicouVoltar:" destination="3By-ua-Nt3" eventType="touchUpInside" id="qBe-ku-hvC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Nw-ug-BFP">
+                                <rect key="frame" x="20" y="431" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K3l-P1-pyf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GiD-kd-Ldq" firstAttribute="centerX" secondItem="zhz-Ok-PZu" secondAttribute="centerX" id="J6f-mn-b7u"/>
+                            <constraint firstItem="3Hc-4d-Olz" firstAttribute="top" secondItem="4Nw-ug-BFP" secondAttribute="bottom" constant="20" id="Vse-UH-tti"/>
+                            <constraint firstItem="3Hc-4d-Olz" firstAttribute="centerX" secondItem="zhz-Ok-PZu" secondAttribute="centerX" id="jUD-CP-TsR"/>
+                            <constraint firstItem="K3l-P1-pyf" firstAttribute="trailing" secondItem="4Nw-ug-BFP" secondAttribute="trailing" constant="20" id="jgd-s8-zNR"/>
+                            <constraint firstItem="4Nw-ug-BFP" firstAttribute="leading" secondItem="K3l-P1-pyf" secondAttribute="leading" constant="20" id="oxd-CV-htb"/>
+                            <constraint firstItem="GiD-kd-Ldq" firstAttribute="top" secondItem="K3l-P1-pyf" secondAttribute="top" constant="20" id="sFJ-tz-XlD"/>
+                            <constraint firstItem="4Nw-ug-BFP" firstAttribute="centerY" secondItem="zhz-Ok-PZu" secondAttribute="centerY" id="v8o-4S-Vn5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enderecoTextField" destination="4Nw-ug-BFP" id="h2Z-6v-E4m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KLV-48-oqj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942.02898550724649" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
